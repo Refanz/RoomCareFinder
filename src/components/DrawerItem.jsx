@@ -15,7 +15,7 @@ function DrawerItem({handleDrawerToggle, navItems}) {
             <Divider/>
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
+                    <ListItem key={item.text} disablePadding>
                         <ListItemButton sx={{textAlign: 'center'}} href={item.href}>
                             <ListItemText primary={item.text}/>
                         </ListItemButton>

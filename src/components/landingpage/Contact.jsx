@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 
 function Contact() {
     return (
-        <Box mt={5}>
+        <Box mt={5} textAlign="center">
             <Typography variant="h4">
                 Contact Us
             </Typography>
