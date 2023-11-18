@@ -11,7 +11,7 @@ function Logout() {
     function handleDialogLogout() {
         setOpen(false);
 
-        window.location = "/dashboard";
+        window.location = "/dashboard/daftar-rumah-sakit-umum";
     }
 
     function handleLogout() {

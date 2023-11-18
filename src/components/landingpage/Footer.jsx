@@ -4,7 +4,7 @@ import {Link} from "@mui/material";
 
 function Footer() {
     return (
-        <Box sx={{ flexGrow: 1, textAlign: 'center', mt: '50px' }}>
+        <Box sx={{ flexGrow: 1, textAlign: 'center', mt: '50px', mb: '20px' }}>
             <Typography>
                 Provided by{' '}
                 <Link href="#" target="_blank" underline="none">

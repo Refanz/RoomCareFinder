@@ -57,7 +57,7 @@ function TopBar({children, handleDrawerToggle, navItems}) {
 export default TopBar
 
 TopBar.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.node,
     handleDrawerToggle: PropTypes.func,
     navItems: PropTypes.array
 }

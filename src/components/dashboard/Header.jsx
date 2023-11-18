@@ -34,5 +34,5 @@ export default Header
 
 Header.propTypes = {
     title: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.node
 }

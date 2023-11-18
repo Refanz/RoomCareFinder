@@ -3,6 +3,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import NameCard from "../components/NameCard.jsx";
 import {Grid} from "@mui/material";
+import Footer from "../components/landingpage/Footer.jsx";
 
 function About() {
     const data = [
@@ -33,10 +34,9 @@ function About() {
                             </Grid>
                         )
                     })}
-
                 </Grid>
-
             </Box>
+            <Footer />
         </>
     );
 }

@@ -5,10 +5,13 @@ import ItemHospital from "./ItemHospital.jsx";
 import {Grid} from "@mui/material";
 import SearchHospital from "./SearchHospital.jsx";
 import PropTypes from "prop-types";
+import {useLocation} from "react-router-dom";
+import Footer from "../landingpage/Footer.jsx";
 
 function ListHospitals({type}) {
     const hospitals = useContext(HospitalContext);
     const [search, setSearch] = useState("");
+    const location = useLocation();
 
     function filteredHospitals() {
         if (search === "") {
@@ -20,7 +23,6 @@ function ListHospitals({type}) {
 
     return (
         <>
-
             <Container sx={{py: 1}} maxWidth="md">
                 <SearchHospital setSearch={setSearch} />
                 <Grid container spacing={4} mt={1}>
@@ -29,6 +31,8 @@ function ListHospitals({type}) {
                     }
                 </Grid>
             </Container>
+
+            <Footer />
         </>
     );
 }

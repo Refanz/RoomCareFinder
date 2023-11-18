@@ -27,7 +27,7 @@ function MyDrawer({children, handleDrawerToggle, mobileOpen}) {
 export default MyDrawer
 
 MyDrawer.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.node,
     handleDrawerToggle: PropTypes.func,
     mobileOpen: PropTypes.bool
 }

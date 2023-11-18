@@ -46,5 +46,5 @@ function NavigationBar({children}) {
 export default NavigationBar;
 
 NavigationBar.propTypes = {
-    children: PropTypes.element
+    children: PropTypes.node
 }

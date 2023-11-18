@@ -26,5 +26,5 @@ function HospitalProvider({children}) {
 export {HospitalContext, HospitalProvider}
 
 HospitalProvider.propTypes = {
-    children: PropTypes.element
+    children: PropTypes.node
 }
