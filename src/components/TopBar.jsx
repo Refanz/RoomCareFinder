@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import {HealthAndSafety} from "@mui/icons-material";
+import PropTypes from "prop-types";
 
 function TopBar({children, handleDrawerToggle, navItems}) {
     return (
@@ -48,13 +49,15 @@ function TopBar({children, handleDrawerToggle, navItems}) {
                     </Box>
                 </Toolbar>
             </AppBar>
-
             {children}
-
-
-
         </Box>
     )
 }
 
 export default TopBar
+
+TopBar.propTypes = {
+    children: PropTypes.element,
+    handleDrawerToggle: PropTypes.func,
+    navItems: PropTypes.array
+}

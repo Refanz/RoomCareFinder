@@ -25,7 +25,7 @@ function Hero() {
                         </Button>
                     </Grid>
                     <Grid item xs={12} md={5}>
-                        <img src="/hospital-room.jpg" alt="My Team" width="100%"  />
+                        <img src="/hospital-room.jpg" alt="Hospital Room" width="100%"  />
                     </Grid>
                 </Grid>
             </Box>

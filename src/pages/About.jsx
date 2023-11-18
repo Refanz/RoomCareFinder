@@ -5,7 +5,6 @@ import NameCard from "../components/NameCard.jsx";
 import {Grid} from "@mui/material";
 
 function About() {
-
     const data = [
         {name: 'Refanda Surya Saputra', nim: '21120120120022'},
         {name: 'Khasandra Nur Pristiwaning Rahayu', nim: '21120120140089'},
@@ -36,10 +35,6 @@ function About() {
                     })}
 
                 </Grid>
-
-
-
-
 
             </Box>
         </>

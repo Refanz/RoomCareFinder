@@ -7,8 +7,9 @@ import {useState} from "react";
 import RoomAPI from "../api/RoomAPI.jsx";
 import Token from "../auth/Token.jsx";
 import InfoSnackbar from "../components/InfoSnackbar.jsx";
+import PropTypes from "prop-types";
 
-function Login(props) {
+function Login({setToken}) {
 
     const auth = new RoomAPI();
     const token = new Token();
@@ -25,7 +26,7 @@ function Login(props) {
             console.log(res);
 
             if (res.statusCode === 200) {
-                props.setToken(res.token);
+                setToken(res.token);
                 token.saveToken(res.token);
             } else {
                 setOpen(true);
@@ -65,3 +66,7 @@ function Login(props) {
 }
 
 export default Login
+
+Login.propTypes = {
+    setToken: PropTypes.func
+}

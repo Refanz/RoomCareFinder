@@ -1,8 +1,7 @@
 import {Drawer} from "@mui/material";
+import PropTypes from "prop-types";
 
 function MyDrawer({children, handleDrawerToggle, mobileOpen}) {
-    //const drawerWidth = 240;
-
     return (
         <>
             <nav>
@@ -26,3 +25,9 @@ function MyDrawer({children, handleDrawerToggle, mobileOpen}) {
 }
 
 export default MyDrawer
+
+MyDrawer.propTypes = {
+    children: PropTypes.element,
+    handleDrawerToggle: PropTypes.func,
+    mobileOpen: PropTypes.bool
+}

@@ -1,5 +1,6 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {Alert, Snackbar, Stack} from "@mui/material";
+import PropTypes from "prop-types";
 
 function InfoSnackbar({isOpen}) {
     const [open, setOpen] = useState(isOpen);
@@ -24,3 +25,7 @@ function InfoSnackbar({isOpen}) {
 }
 
 export default InfoSnackbar
+
+InfoSnackbar.propTypes = {
+    isOpen: PropTypes.node
+}

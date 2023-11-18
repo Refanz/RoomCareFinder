@@ -9,6 +9,7 @@ import About from "./pages/About.jsx";
 import Logout from "./pages/Logout.jsx";
 import Token from "./auth/Token.jsx";
 import {useState} from "react";
+import DetailHospital from "./components/dashboard/DetailHospital.jsx";
 
 function App() {
     const tokenLogin = new Token();
@@ -33,8 +34,6 @@ function App() {
 
     return (
         <>
-
-
             <BrowserRouter>
                 <NavigationBar/>
                 <Routes>
@@ -42,14 +41,16 @@ function App() {
                     <Route path="/dashboard" element={<GuardedRoute Component={Dashboard}/> }/>
                     <Route path="/dashboard/daftar-rumah-sakit-umum" element={<GuardedRoute Component={Dashboard}/> }/>
                     <Route path="/dashboard/daftar-rumah-sakit-khusus" element={<GuardedRoute Component={Dashboard}/> }/>
+                    <Route path="/dashboard/daftar-rumah-sakit-umum/detail/:id" element={<GuardedRoute Component={DetailHospital}/> }/>
+                    <Route path="/dashboard/daftar-rumah-sakit-khusus/detail/:id" element={<GuardedRoute Component={DetailHospital}/> }/>
+                    <Route path="/dashboard/daftar-rumah-sakit-umum/room/:id" element={<GuardedRoute Component={DetailHospital}/> }/>
+                    <Route path="/dashboard/daftar-rumah-sakit-khusus/room/:id" element={<GuardedRoute Component={DetailHospital}/> }/>
                     <Route path="/login" element={<LoginRoute Component={Login}/> }/>
                     <Route path="/logout" element={<GuardedRoute Component={Logout}/>} />
                     <Route path="/about" element={<About/>}/>
                     <Route path="*" element={<NoPage/>}/>
                 </Routes>
             </BrowserRouter>
-
-
         </>
     )
 }

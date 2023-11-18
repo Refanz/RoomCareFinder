@@ -5,6 +5,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
 
 function DrawerItem({handleDrawerToggle, navItems}) {
     return (
@@ -27,3 +28,8 @@ function DrawerItem({handleDrawerToggle, navItems}) {
 }
 
 export default DrawerItem
+
+DrawerItem.propTypes = {
+    handleDrawerToggle: PropTypes.func,
+    navItems: PropTypes.array
+}

@@ -1,5 +1,6 @@
-import {Card, CardActions, CardContent, CardMedia} from "@mui/material";
+import {Card, CardContent, CardMedia} from "@mui/material";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 function NameCard({name, desc}) {
     return (
@@ -22,3 +23,8 @@ function NameCard({name, desc}) {
 }
 
 export default NameCard
+
+NameCard.propTypes = {
+    name: PropTypes.string,
+    desc: PropTypes.string
+}

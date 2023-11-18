@@ -3,6 +3,7 @@ import DrawerItem from "./DrawerItem.jsx";
 import {useEffect, useState} from "react";
 import MyDrawer from "./MyDrawer.jsx";
 import {useLocation} from "react-router-dom";
+import PropTypes from "prop-types";
 
 function NavigationBar({children}) {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -43,3 +44,7 @@ function NavigationBar({children}) {
 }
 
 export default NavigationBar;
+
+NavigationBar.propTypes = {
+    children: PropTypes.element
+}

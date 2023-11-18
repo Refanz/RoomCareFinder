@@ -21,11 +21,19 @@ class RoomAPI {
 
     async getHospitals() {
         try {
-            const url = `${this.baseUrl}/posts`;
+            const url = `${this.baseUrl}/hospitals`;
             const response = await axios.get(url);
 
             return response.data;
         } catch (err) {
+            console.log(err);
+        }
+    }
+
+    async getRooms() {
+        try {
+            const url = `${this.baseUrl}/hospitals`;
+        } catch(err) {
             console.log(err);
         }
     }

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Dialog, DialogActions, DialogTitle} from "@mui/material";
 import Button from "@mui/material/Button";
-import {Navigate} from "react-router-dom";
 import Token from "../auth/Token.jsx";
 
 function Logout() {

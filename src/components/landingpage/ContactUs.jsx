@@ -8,7 +8,7 @@ function ContactUs() {
         <Box>
             <Grid container spacing={6}>
                 <Grid item xs={12} md={5}>
-                    <img src="/hospital-room2.jpg" width="100%" />
+                    <img src="/hospital-room2.jpg" width="100%"  alt="Hospital Room 2"/>
                 </Grid>
 
                 <Grid item xs={12} md={6}>
