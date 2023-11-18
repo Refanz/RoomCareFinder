@@ -9,6 +9,10 @@ class Token {
     saveToken(token) {
         localStorage.setItem(this.#tokenLogin, JSON.stringify(token));
     }
+
+    removeToken() {
+        localStorage.removeItem(this.#tokenLogin);
+    }
 }
 
 export default Token

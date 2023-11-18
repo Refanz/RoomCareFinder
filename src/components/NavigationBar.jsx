@@ -1,17 +1,30 @@
 import TopBar from "./TopBar.jsx";
 import DrawerItem from "./DrawerItem.jsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import MyDrawer from "./MyDrawer.jsx";
-
+import {useLocation} from "react-router-dom";
 
 function NavigationBar({children}) {
     const [mobileOpen, setMobileOpen] = useState(false);
+    const location = useLocation();
 
-    const navItems = [
-        {text: "Home", href: "/"},
-        {text: "About", href: "/about"},
-        {text: "Login", href: "/login"}
-    ];
+    const [navItems, setNavItems] = useState([]);
+
+    useEffect(() => {
+        if (location.pathname.includes("/dashboard")) {
+            setNavItems([
+                {text: "Rumah Sakit Umum", href: "/dashboard/daftar-rumah-sakit-umum"},
+                {text: "Rumah Sakit Khusus", href: "/dashboard/daftar-rumah-sakit-khusus"},
+                {text: "Logout", href: "/logout"}
+            ]);
+        } else {
+            setNavItems([
+                {text: "Home", href: "/"},
+                {text: "About", href: "/about"},
+                {text: "Login", href: "/login"}
+            ]);
+        }
+    }, [location]);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);

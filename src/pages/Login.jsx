@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import {useState} from "react";
 import RoomAPI from "../api/RoomAPI.jsx";
 import Token from "../auth/Token.jsx";
+import InfoSnackbar from "../components/InfoSnackbar.jsx";
 
 function Login(props) {
 
@@ -15,14 +16,23 @@ function Login(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const [open, setOpen] = useState(false);
+
     function handleSubmit(e) {
         e.preventDefault();
 
         auth.login({email, password}).then((res) => {
             console.log(res);
-            props.setToken(res.token);
-            token.saveToken(res.token);
-        });
+
+            if (res.statusCode === 200) {
+                props.setToken(res.token);
+                token.saveToken(res.token);
+            } else {
+                setOpen(true);
+            }
+        })
+
+        setOpen(false);
     }
 
     return (
@@ -48,6 +58,8 @@ function Login(props) {
                     </Grid>
                 </Grid>
             </form>
+
+            {open && <InfoSnackbar isOpen={open}/>}
         </Box>
     );
 }
