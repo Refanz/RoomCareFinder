@@ -20,8 +20,8 @@ function NavigationBar({children}) {
             ]);
         } else {
             setNavItems([
-                {text: "Home", href: "/"},
-                {text: "About", href: "/about"},
+                // {text: "Home", href: "/"},
+                // {text: "About", href: "/about"},
                 {text: "Login", href: "/login"}
             ]);
         }
@@ -33,11 +33,9 @@ function NavigationBar({children}) {
 
     return (
         <TopBar handleDrawerToggle={handleDrawerToggle} navItems={navItems}>
-
             <MyDrawer handleDrawerToggle={handleDrawerToggle} mobileOpen={mobileOpen}>
                 <DrawerItem handleDrawerToggle={handleDrawerToggle} navItems={navItems}/>
             </MyDrawer>
-
             {children}
         </TopBar>
     );

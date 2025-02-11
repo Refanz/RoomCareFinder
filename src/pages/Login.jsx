@@ -8,7 +8,6 @@ import RoomAPI from "../api/RoomAPI.jsx";
 import Token from "../auth/Token.jsx";
 import InfoSnackbar from "../components/InfoSnackbar.jsx";
 import PropTypes from "prop-types";
-import Footer from "../components/landingpage/Footer.jsx";
 
 function Login({setToken}) {
 

@@ -18,10 +18,10 @@ function Hero() {
                         <Button
                             variant="contained"
                             color="primary"
-                            href="/about"
+                            href="/"
                             sx={{ width: '200px', fontSize: '16px', mt:'20px' }}
                         >
-                            ABOUT US
+                            READ MORE
                         </Button>
                     </Grid>
                     <Grid item xs={12} md={5}>
