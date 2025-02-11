@@ -37,32 +37,30 @@ function App() {
     }
 
     return (
-        <>
-            <BrowserRouter>
-                <NavigationBar/>
-                <HospitalProvider>
-                    <Routes>
-                        <Route path="/" element={<Home/>}/>
-                        <Route path="/dashboard/daftar-rumah-sakit-umum"
-                               element={<GuardedRoute Component={GeneralHospitals}/>}/>
-                        <Route path="/dashboard/daftar-rumah-sakit-khusus"
-                               element={<GuardedRoute Component={SpecialHospitals}/>}/>
-                        <Route path="/dashboard/daftar-rumah-sakit-umum/detail/:id"
-                               element={<GuardedRoute Component={DetailHospital}/>}/>
-                        <Route path="/dashboard/daftar-rumah-sakit-khusus/detail/:id"
-                               element={<GuardedRoute Component={DetailHospital}/>}/>
-                        <Route path="/dashboard/daftar-rumah-sakit-umum/room/:id"
-                               element={<GuardedRoute Component={ListRooms}/>}/>
-                        <Route path="/dashboard/daftar-rumah-sakit-khusus/room/:id"
-                               element={<GuardedRoute Component={ListRooms}/>}/>
-                        <Route path="/login" element={<LoginRoute Component={Login}/>}/>
-                        <Route path="/logout" element={<GuardedRoute Component={Logout}/>}/>
-                        <Route path="/about" element={<About/>}/>
-                        <Route path="*" element={<NoPage/>}/>
-                    </Routes>
-                </HospitalProvider>
-            </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <NavigationBar/>
+            <HospitalProvider>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/dashboard/daftar-rumah-sakit-umum"
+                           element={<GuardedRoute Component={GeneralHospitals}/>}/>
+                    <Route path="/dashboard/daftar-rumah-sakit-khusus"
+                           element={<GuardedRoute Component={SpecialHospitals}/>}/>
+                    <Route path="/dashboard/daftar-rumah-sakit-umum/detail/:id"
+                           element={<GuardedRoute Component={DetailHospital}/>}/>
+                    <Route path="/dashboard/daftar-rumah-sakit-khusus/detail/:id"
+                           element={<GuardedRoute Component={DetailHospital}/>}/>
+                    <Route path="/dashboard/daftar-rumah-sakit-umum/room/:id"
+                           element={<GuardedRoute Component={ListRooms}/>}/>
+                    <Route path="/dashboard/daftar-rumah-sakit-khusus/room/:id"
+                           element={<GuardedRoute Component={ListRooms}/>}/>
+                    <Route path="/login" element={<LoginRoute Component={Login}/>}/>
+                    <Route path="/logout" element={<GuardedRoute Component={Logout}/>}/>
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="*" element={<NoPage/>}/>
+                </Routes>
+            </HospitalProvider>
+        </BrowserRouter>
     )
 }
 

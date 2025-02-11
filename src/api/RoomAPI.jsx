@@ -3,7 +3,7 @@ import axios from "axios";
 class RoomAPI {
 
     constructor() {
-        this.baseUrl = "https://hospital-room-api-ouc7.vercel.app/api";
+        this.baseUrl = "https://hospital-room-api.vercel.app/api";
     }
 
     async login(credentials) {
