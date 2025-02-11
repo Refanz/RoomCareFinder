@@ -7,20 +7,18 @@ import Testimonial from "../components/landingpage/Testimonial.jsx";
 import Contact from "../components/landingpage/Contact.jsx";
 import Footer from "../components/landingpage/Footer.jsx";
 
-function Home() {
+function HomePage() {
     return (
-        <>
-            <Box component="main" sx={{ p: 3 }}>
-                <Toolbar />
-                <Hero />
-                <Section />
-                <ContactUs />
-                <Testimonial />
-                <Contact />
-                <Footer />
-            </Box>
-        </>
+        <Box component="main" sx={{p: 3}}>
+            <Toolbar/>
+            <Hero/>
+            <Section/>
+            <ContactUs/>
+            <Testimonial/>
+            <Contact/>
+            <Footer/>
+        </Box>
     );
 }
 
-export default Home
+export default HomePage;

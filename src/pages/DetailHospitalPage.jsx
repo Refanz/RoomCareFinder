@@ -1,12 +1,12 @@
 import Container from "@mui/material/Container";
 import {Grid} from "@mui/material";
 import {useContext} from "react";
-import {HospitalContext} from "../../context/HospitalContext.jsx";
+import {HospitalContext} from "../context/HospitalContext.jsx";
 import {useParams} from "react-router-dom";
-import ItemDetailHospital from "./ItemDetailHospital.jsx";
-import Footer from "../landingpage/Footer.jsx";
+import ItemDetailHospital from "../components/dashboard/ItemDetailHospital.jsx";
+import Footer from "../components/landingpage/Footer.jsx";
 
-function DetailHospital() {
+function DetailHospitalPage() {
     const hospitals = useContext(HospitalContext);
     const id = parseInt(useParams().id);
 
@@ -33,4 +33,4 @@ function DetailHospital() {
 
 }
 
-export default DetailHospital;
+export default DetailHospitalPage;

@@ -9,7 +9,7 @@ import Token from "../auth/Token.jsx";
 import InfoSnackbar from "../components/InfoSnackbar.jsx";
 import PropTypes from "prop-types";
 
-function Login({setToken}) {
+function LoginPage({setToken}) {
 
     const auth = new RoomAPI();
     const token = new Token();
@@ -65,8 +65,8 @@ function Login({setToken}) {
     );
 }
 
-export default Login
+export default LoginPage
 
-Login.propTypes = {
+LoginPage.propTypes = {
     setToken: PropTypes.func
 }

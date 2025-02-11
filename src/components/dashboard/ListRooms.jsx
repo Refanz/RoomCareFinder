@@ -3,7 +3,7 @@ import {Grid} from "@mui/material";
 import Footer from "../landingpage/Footer.jsx";
 import {useContext} from "react";
 import {HospitalContext} from "../../context/HospitalContext.jsx";
-import {useLocation, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import ItemRoom from "./ItemRoom.jsx";
 import PropTypes from "prop-types";
 import Typography from "@mui/material/Typography";

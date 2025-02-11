@@ -41,7 +41,7 @@ function TopBar({children, handleDrawerToggle, navItems}) {
                         Room Care Finder
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
+                        {navItems?.map((item) => (
                             <Button key={item.text} sx={{ color: '#fff' }} href={item.href}>
                                 {item.text}
                             </Button>

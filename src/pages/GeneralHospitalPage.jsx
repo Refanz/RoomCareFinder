@@ -3,7 +3,7 @@ import ListHospitals from "../components/dashboard/ListHospitals.jsx";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 
-function GeneralHospitals() {
+function GeneralHospitalPage() {
     return (
         <Box component="main" sx={{ p: 3 }}>
             <Toolbar />
@@ -14,4 +14,4 @@ function GeneralHospitals() {
     )
 }
 
-export default GeneralHospitals
+export default GeneralHospitalPage

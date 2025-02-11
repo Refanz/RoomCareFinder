@@ -1,19 +1,10 @@
 import './App.css'
 import NavigationBar from "./components/NavigationBar.jsx";
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import Login from "./pages/Login.jsx";
-import NoPage from "./pages/NoPage.jsx";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Logout from "./pages/Logout.jsx";
+import {Navigate, RouterProvider} from "react-router-dom";
 import Token from "./auth/Token.jsx";
 import {useState} from "react";
-import DetailHospital from "./components/dashboard/DetailHospital.jsx";
 import PropTypes from "prop-types";
-import {HospitalProvider} from "./context/HospitalContext.jsx";
-import GeneralHospitals from "./pages/GeneralHospitals.jsx";
-import SpecialHospitals from "./pages/SpecialHospitals.jsx";
-import ListRooms from "./components/dashboard/ListRooms.jsx";
+import router from "./routes/router.jsx";
 
 function App() {
     const tokenLogin = new Token();
@@ -37,30 +28,33 @@ function App() {
     }
 
     return (
-        <BrowserRouter>
+        <>
             <NavigationBar/>
-            <HospitalProvider>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/dashboard/daftar-rumah-sakit-umum"
-                           element={<GuardedRoute Component={GeneralHospitals}/>}/>
-                    <Route path="/dashboard/daftar-rumah-sakit-khusus"
-                           element={<GuardedRoute Component={SpecialHospitals}/>}/>
-                    <Route path="/dashboard/daftar-rumah-sakit-umum/detail/:id"
-                           element={<GuardedRoute Component={DetailHospital}/>}/>
-                    <Route path="/dashboard/daftar-rumah-sakit-khusus/detail/:id"
-                           element={<GuardedRoute Component={DetailHospital}/>}/>
-                    <Route path="/dashboard/daftar-rumah-sakit-umum/room/:id"
-                           element={<GuardedRoute Component={ListRooms}/>}/>
-                    <Route path="/dashboard/daftar-rumah-sakit-khusus/room/:id"
-                           element={<GuardedRoute Component={ListRooms}/>}/>
-                    <Route path="/login" element={<LoginRoute Component={Login}/>}/>
-                    <Route path="/logout" element={<GuardedRoute Component={Logout}/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="*" element={<NoPage/>}/>
-                </Routes>
-            </HospitalProvider>
-        </BrowserRouter>
+            <RouterProvider router={router}/>
+        </>
+        // <BrowserRouter>
+        //     <NavigationBar/>
+        //     <HospitalProvider>
+        //         <Routes>
+        //             <Route path="/" element={<HomePage/>}/>
+        //             <Route path="/dashboard/daftar-rumah-sakit-umum"
+        //                    element={<GuardedRoute Component={GeneralHospitalPage}/>}/>
+        //             <Route path="/dashboard/daftar-rumah-sakit-khusus"
+        //                    element={<GuardedRoute Component={SpecialHospitals}/>}/>
+        //             <Route path="/dashboard/daftar-rumah-sakit-umum/detail/:id"
+        //                    element={<GuardedRoute Component={DetailHospitalPage}/>}/>
+        //             <Route path="/dashboard/daftar-rumah-sakit-khusus/detail/:id"
+        //                    element={<GuardedRoute Component={DetailHospitalPage}/>}/>
+        //             <Route path="/dashboard/daftar-rumah-sakit-umum/room/:id"
+        //                    element={<GuardedRoute Component={ListRooms}/>}/>
+        //             <Route path="/dashboard/daftar-rumah-sakit-khusus/room/:id"
+        //                    element={<GuardedRoute Component={ListRooms}/>}/>
+        //             <Route path="/login" element={<LoginRoute Component={LoginPage}/>}/>
+        //             <Route path="/logout" element={<GuardedRoute Component={Logout}/>}/>
+        //             <Route path="*" element={<NoPage/>}/>
+        //         </Routes>
+        //     </HospitalProvider>
+        // </BrowserRouter>
     )
 }
 
